@@ -1,6 +1,7 @@
 /*=====================================================
 LINK: https://developer.mozilla.org /en-US/docs/Web/JavaScript/Reference/Global_Objects/String
 =====================================================
+
 Wskazówki do zadań:
 - string.replace() - zmiana dowolnego znaku lub ciągu znaków
 - string.split() - konwersja stringa do tablicy

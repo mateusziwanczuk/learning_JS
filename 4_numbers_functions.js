@@ -1,6 +1,7 @@
 /*====================================================
 NUMBERS: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number
 =====================================================
+
 Wskazówki do zadań:
 - Number.parseFloat(val) - konwersja stringa na liczbę
 - val.toFixed() - dokładność liczb po przecinku

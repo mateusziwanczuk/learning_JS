@@ -1,4 +1,3 @@
-/************************************************* */
 
 /* TODO: 1. Napisz funkcję, która wyświetla console.log z dowolnym tekstem */
 
@@ -8,8 +7,6 @@
 
     showMessage();
 
-/************************************************* */
-/************************************************* */
 
 /* TODO: 2. Napisz funkcję, która przyjmuje dwa parametry: firstName oraz lastName a 
     - zwraca stringa z powitaniem, np: 'Hello my dear Tomek!'
@@ -26,8 +23,6 @@
         return 'Hello my dear' + firstName + ' ' + lastName;
     } // mozna uzyc dopiero po zadeklarowaniu w kolejnych liniach
 
-/************************************************* */
-/************************************************* */
 
 /* TODO: 3. Napisz funkcję, która przyjmuje dwa parametry: firstName oraz lastName. Następnie:
     - zwraca stringa z powitaniem (wykorzystaj z funkcję z TODO1!) a do powitania
@@ -41,8 +36,6 @@
 
     sayLovelyHello('Matesz', 'Foo');
 
-/************************************************* */
-/************************************************* */
 
 /* TODO: 4. Opakuj kod z tego pliku w IIFE.        */
 
