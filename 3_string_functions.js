@@ -41,7 +41,7 @@ Wskazówki do zadań:
         return str.split(separator);
     }
 
-    splitter(nameOne, separator: '');
+    splitter(nameOne, separator: ' ');
     splitter(nameTwo, separator: '_');
     splitter(nameThree, separator: 'OX1');
 

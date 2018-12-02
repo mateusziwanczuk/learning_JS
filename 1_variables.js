@@ -66,7 +66,7 @@
 /**************************************************************************************************/
 /**************************************************************************************************/
 
-var myDiv = "<div id="my-id">Hello World</div>"; // ERROR
+// var myDiv = "<div id="my-id">Hello World</div>"; // ERROR
 var myDiv = '<div id="my-id">Hello World</div>'; // OK
 // one string or double string
 
