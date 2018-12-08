@@ -37,13 +37,9 @@ Wskazówki do zadań:
     var nameTwo = 'R_a_m_b_o';
     var nameThree = 'ROX1aOX1mOX1bOX1o'; 
 
-    function splitter(str, separator) {
-        return str.split(separator);
+    function splitter(nameOne, separator) {
+        return nameOne.split(separator);
     }
-
-    splitter(nameOne, separator: ' ');
-    splitter(nameTwo, separator: '_');
-    splitter(nameThree, separator: 'OX1');
 
 /* TODO: 4. Stwórz nowe zmienne na podstawie stringa name = "EXPIRED", które zawierają odpowiednio:
     - pierwsze 3 litery tego stringa

@@ -1,6 +1,5 @@
 __________________________________________________
 
-	Exercices of JavaScript
-		to learn
+	basic exercices of JavaScript
 
 __________________________________________________
