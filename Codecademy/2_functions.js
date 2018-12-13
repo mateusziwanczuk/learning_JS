@@ -85,3 +85,26 @@ const plantNeedsWater = function(day) {
     plantNeedsWater('Tuesday');
     console.log(plantNeedsWater('Tuesday'));
     // Unlike function declarations, function expressions are not hoisted so they cannot be called before they are defined.
+
+
+
+// ARROW FUNCTIONS
+
+const plantNeedsWater2 = (day) => {
+    if (day === 'Wednesday') {
+        return true;
+    } else {
+        return false;
+    }
+};
+    plantNeedsWater2('Tuesday');
+    console.log(plantNeedsWater2('Tuesday'));
+    // 'fat arrow' ()=>
+
+
+
+// CONCISE BODY ARROW FUNCTIONS
+
+const plantNeedsWater3 = day => day === 'Wednesday' ? true : false;
+    plantNeedsWater3('Tuesday');
+    console.log(plantNeedsWater3('Tuesday'));
