@@ -96,7 +96,28 @@ const chores2 = ['wash dishes', 'do laundry', 'take out trash', 'cook dinner', '
 
 
 
+// ARRAYS AND FUNCTIONS
 
+const concept = ['arrays', 'can', 'be', 'mutated'];
+function changeArr(arr){
+  arr[3] = 'MUTATED';
+}
+    changeArr(concept);
+        console.log(concept); // output: ["arrays", "can", "be", "MUTATED"]
+    function removeElement(newArr){
+        newArr.pop();
+    }
+    removeElement(concept);
+        console.log(removeElement(concept)); // output: undefined
+    // Notice that in both cases, the change to the array was maintained outside of the function!
+
+
+
+// NESTED ARRAYS
+
+const numberClusters = [[1, 2], [3, 4], [5, 6]]; // 3 array elements
+    const target = numberClusters[2][1]; // Acces the element '6' inside numberClusters
+    // When an array contains another array it is known as a nested array.
 
 
 
