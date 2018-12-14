@@ -85,7 +85,29 @@ for (let i = 0; i < myFollowers.length; i++) {
 
 
 
+// DO...WHILE STATEMENTS
 
+let cupsOfSugarNeeded = 3;
+let cupsAdded = 0;
+
+do {
+    cupsAdded++
+} while (cupsAdded < cupsOfSugarNeeded);
+    // do...while loops run code at least once— only checking the stopping condition after the first execution.
+
+
+
+// THE BREAK KEYWORD
+
+for (let i = 0; i < 99; i++) {
+    if (i > 2 ) {
+       break;
+    }
+    console.log('Banana.');
+  }
+    console.log('Orange you glad I broke out the loop!');
+    // 'Break' statements can be especially helpful when we're looping through large data structures.
+        // With breaks, we can add test conditions besides the stopping condition, and exit the loop when they're met.
 
 
 
