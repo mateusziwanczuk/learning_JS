@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+body {
+  height: 100vh;
+  width: 100%;
+}
+  .main {
+    align-items: center;
+    background-color: #f2f2f2;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  .main__box {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    border-radius: 5px;
+    font-size: 9.4rem;
+    height: 10rem;
+    position: relative;
+    text-align: center;
+    top: 0;
+    transition: all .2s;
+    width: 10rem;
+  }
+  
+  .main__box--active {
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    top: -5px;
+  }
+  
+  .love {
+    user-select: none;                   
+  }
+  
+  .loveRight {
+    position: absolute;
+    animation: flyRight 1s linear forwards;
+    
+    font-size: 40px;
+    top: -40px;
+    left: calc(50% - 20px);
+  }
+  
+  .loveLeft {
+    position: absolute;
+    animation: flyLeft 1s linear forwards;
+    
+    font-size: 40px;
+    top: -40px;
+    left: calc(50% - 20px);
+  }
+  
+  @-webkit-keyframes flyRight {
+    0.0000% { -webkit-transform: translate(0.0px, 0.0px) ; }
+    8.7046% { -webkit-transform: translate(14.9px, -41.3px) ; }
+    11.8647% { -webkit-transform: translate(22.5px, -55.3px) ; }
+    14.3520% { -webkit-transform: translate(30.2px, -65.2px) ; }
+    16.3044% { -webkit-transform: translate(37.9px, -71.2px) ; }
+    17.5419% { -webkit-transform: translate(43.8px, -73.4px) ; }
+    19.0933% { -webkit-transform: translate(51.6px, -73.3px) ; }
+    20.7723% { -webkit-transform: translate(59.4px, -70.1px) ; }
+    25.0499% { -webkit-transform: translate(75.0px, -55.3px) ; }
+    30.7865% { -webkit-transform: translate(90.5px, -30.8px) ; }
+    37.8113% { -webkit-transform: translate(105.6px, 1.2px) ; }
+    45.8132% { -webkit-transform: translate(120.2px, 38.8px) ; }
+    63.2985% { -webkit-transform: translate(147.4px, 122.6px) ; }
+    97.6834% { -webkit-transform: translate(196.2px, 288.9px) ; }
+    100.0000% { -webkit-transform: translate(202.0px, 9999.0px) ; }
+  }
+  
+  @-webkit-keyframes flyLeft {
+     0.0000% { -webkit-transform: translate(0.0px, 0.0px) ; }
+    8.1066% { -webkit-transform: translate(-9.1px, -41.7px) ; }
+    10.9653% { -webkit-transform: translate(-14.7px, -55.6px) ; }
+    13.1606% { -webkit-transform: translate(-21.0px, -65.3px) ; }
+    14.8549% { -webkit-transform: translate(-27.8px, -71.0px) ; }
+    16.3012% { -webkit-transform: translate(-35.1px, -73.0px) ; }
+    17.8062% { -webkit-transform: translate(-42.9px, -71.6px) ; }
+    19.5916% { -webkit-transform: translate(-51.1px, -66.9px) ; }
+    21.7535% { -webkit-transform: translate(-59.5px, -59.3px) ; }
+    27.2515% { -webkit-transform: translate(-77.2px, -36.4px) ; }
+    34.1630% { -webkit-transform: translate(-95.3px, -4.9px) ; }
+    42.1680% { -webkit-transform: translate(-113.3px, 33.2px) ; }
+    59.9619% { -webkit-transform: translate(-147.1px, 120.5px) ; }
+    77.5227% { -webkit-transform: translate(-174.5px, 208.7px) ; }
+    91.6579% { -webkit-transform: translate(-191.3px, 281.1px) ; }
+    96.4606% { -webkit-transform: translate(-194.4px, 306.2px) ; }
+    99.2914% { -webkit-transform: translate(-193.3px, 321.1px) ; }
+    100.0000% { -webkit-transform: translate(-191.0px, 9999.0px) ; }
+  }
