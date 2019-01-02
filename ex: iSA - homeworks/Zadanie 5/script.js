@@ -79,11 +79,12 @@ offices.forEach(function(office) {
 
 // 4. Wyświetl, informację o biurze w Poznaniu 
 
-  console.log(offices[3]);
-  console.log(company.offices[3]);
+  console.log(offices[3]); // output: {id: "PO", name: "Poznań"}
+  console.log(company.offices[3]); // output: undefined
   console.log(`Lokalizacja: ${company.offices[3].name}, Liczba pracowników: ${company.offices[3].workers.length},` /* Średnia pensja: ${company.offices[3].officeAverageSalary()}*/);
+    // output: Uncaught TypeError
 
-
+    
 // 5. Wyświetl średnią pensję w całej firmie
 
   /* console.log(companyAverageSalary()); */
