@@ -62,7 +62,7 @@ offices.forEach(function(office) {
 
 // 1. Wyświetl, informację o biurze w Gliwicach (lokalizacja, liczba przypisanych pracowników, średnia pensja),
 
-  console.log(company.offices[1].name, company.offices[1].workers.length , /*company.offices[1].officeAverageSalary()*/);
+  console.log(`Lokalizacja: ${company.offices[1].name}, Liczba pracowników: ${company.offices[1].workers.length},` /* Średnia pensja: ${company.offices[1].officeAverageSalary()}*/);
 
 
 // 2. Dodaj nowe biuro (w Poznaniu)
@@ -79,12 +79,14 @@ offices.forEach(function(office) {
 
 // 4. Wyświetl, informację o biurze w Poznaniu 
 
-  console.log(company.offices[3].name, company.offices[3].workers.length , /*company.offices[1].officeAverageSalary()*/);
+  console.log(offices[3]);
+  console.log(company.offices[3]);
+  console.log(`Lokalizacja: ${company.offices[3].name}, Liczba pracowników: ${company.offices[3].workers.length},` /* Średnia pensja: ${company.offices[3].officeAverageSalary()}*/);
 
 
 // 5. Wyświetl średnią pensję w całej firmie
 
-  /* console.log(companeAverageSalary()); */
+  /* console.log(companyAverageSalary()); */
 
 
 // 6. Wyświetl najlepiej opłacanego pracownika w poszczególnych biurach
