@@ -60,7 +60,7 @@ offices.forEach(function(office) {
     },
     officeAverageSalary: function(){
       let result = this.workers.reduce((a,b) => { 
-        return a + b }, 0) / this.workers.length;
+        return a + b.salary }, 0) / this.workers.length;
       return result; 
     }
   });
@@ -86,7 +86,7 @@ offices.forEach(function(office) {
 
 // 4. Wyświetl, informację o biurze w Poznaniu 
 
-  console.log(`Lokalizacja: ${company.offices[3].name}, Liczba pracowników: ${company.offices[3].workers.length}, Średnia pensja: ${company.offices[3].officeAverageSalary()}`);
+  // console.log(`Lokalizacja: ${offices[3].name}, Liczba pracowników: ${offices[3].workers.length}, Średnia pensja: ${offices[3].officeAverageSalary()}`);
 
     
 // 5. Wyświetl średnią pensję w całej firmie
@@ -101,9 +101,14 @@ offices.forEach(function(office) {
 
 // 6. Wyświetl najlepiej opłacanego pracownika w poszczególnych biurach
 
+  // company.offices.forEach(office => 
+    // console.log(`Najlepiej opłacany pracownik w mieście ${office.name} to `, office.officeBestWorker()));
+  
 
 // 7. Wyświetl najlepiej opłacanego pracownika w całej firmie oraz nazwę jego biura.
 
-
+  // const bestCompanyWorker = workers.slice().sort((a,b) => b.salary-a.salary)[0];
+  // const officeOfWorker = offices.find(office => office.id === bestCompanyWorker.office).name;
+  // console.log('Najlepiej opłacany pracownik: ', bestCompanyWorker, 'w ', officeOfWorker);
 
 
