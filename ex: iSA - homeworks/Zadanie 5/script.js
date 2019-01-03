@@ -55,14 +55,9 @@ offices.forEach(function(office) {
     id: office.id,
     name: office.name, 
     workers: workers.filter(worker => worker.office === office.id),
-    /* officeBestSalaryWorker: function(){
-      let officeBestSalary = 0;
-      for (let i=0; i < workers.salary.length; i++){
-        if (officeBestSalary <= workers.salary[i]){
-          officeBestSalary = workers.salary[i];
-        }
-      }
-    }, */
+    officeBestWorker: function(){
+      return this.workers.slice().sort((a,b) => b.salary-a.salary)[0];
+    },
     officeAverageSalary: function(){
       let result = this.workers.reduce((a,b) => { 
         return a + b }, 0) / this.workers.length;
