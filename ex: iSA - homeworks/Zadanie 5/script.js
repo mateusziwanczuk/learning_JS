@@ -48,46 +48,63 @@ var workers = [
   { id: 15, name: "Magda",      type: "P", office: "KO", salary: 220 }
 ];
 
+/************************************************************************************/
+
 offices.forEach(function(office) {
   company.offices.push({ 
     id: office.id,
     name: office.name, 
     workers: workers.filter(worker => worker.office === office.id),
-    // officeBestWorker: function(){};
-    // officeAverageSalary: function(){};
+    /* officeBestSalaryWorker: function(){
+      let officeBestSalary = 0;
+      for (let i=0; i < workers.salary.length; i++){
+        if (officeBestSalary <= workers.salary[i]){
+          officeBestSalary = workers.salary[i];
+        }
+      }
+    }, */
+    officeAverageSalary: function(){
+      let result = this.workers.reduce((a,b) => { 
+        return a + b }, 0) / this.workers.length;
+      return result; 
+    }
   });
 });
 
-/************************************************************************************/
 
 // 1. Wyświetl, informację o biurze w Gliwicach (lokalizacja, liczba przypisanych pracowników, średnia pensja),
 
-  console.log(`Lokalizacja: ${company.offices[1].name}, Liczba pracowników: ${company.offices[1].workers.length},` /* Średnia pensja: ${company.offices[1].officeAverageSalary()}*/);
+  console.log(`1) Informacje o biurze w Gliwicach. Lokalizacja: ${company.offices[1].name}, Liczba pracowników: ${company.offices[1].workers.length}, Średnia pensja: ${company.offices[1].officeAverageSalary()}`);
 
 
 // 2. Dodaj nowe biuro (w Poznaniu)
 
   offices.push({ id: "PO", name: "Poznań" });
-  console.log(offices[3]);
+  console.log('2)', offices[3]);
 
 
 // 3. Dodaj nowego pracownika do biura w Poznaniu: { id: 16, name: "Olek", type: "M", office: "PO", salary: 500 }
 
   workers.push({ id: 16, name: "Olek", type: "M", office: "PO", salary: 500 });
-  console.log(workers[15]);
+  console.log('3)', workers[15]);
 
 
 // 4. Wyświetl, informację o biurze w Poznaniu 
 
-  console.log(offices[3]); // output: {id: "PO", name: "Poznań"}
-  console.log(company.offices[3]); // output: undefined
-  console.log(`Lokalizacja: ${company.offices[3].name}, Liczba pracowników: ${company.offices[3].workers.length},` /* Średnia pensja: ${company.offices[3].officeAverageSalary()}*/);
+  // console.log(offices[3]); // output: {id: "PO", name: "Poznań"}
+  // console.log(company.offices[3]); // output: undefined
+  // console.log(`Lokalizacja: ${company.offices[3].name}, Liczba pracowników: ${company.offices[3].workers.length}, Średnia pensja: ${company.offices[3].officeAverageSalary()}`);
     // output: Uncaught TypeError
 
     
 // 5. Wyświetl średnią pensję w całej firmie
-
-  /* console.log(companyAverageSalary()); */
+  
+  function companyAverageSalary(){
+    let result = 
+      workers.reduce((a,b) => { return a + b.salary }, 0) / workers.length;
+    return result;
+  }
+  console.log(`5) Średnia pensja w całej firmie wynosi ${companyAverageSalary()}`);
 
 
 // 6. Wyświetl najlepiej opłacanego pracownika w poszczególnych biurach
