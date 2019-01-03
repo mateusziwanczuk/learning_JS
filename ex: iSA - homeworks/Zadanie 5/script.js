@@ -79,8 +79,8 @@ offices.forEach(function(office) {
 
 // 2. Dodaj nowe biuro (w Poznaniu)
 
-  offices.push({ id: "PO", name: "Poznań" });
-  console.log('2)', offices[3]);
+  company.offices.push({ id: "PO", name: "Poznań" });
+  console.log('2)', company.offices[3]);
 
 
 // 3. Dodaj nowego pracownika do biura w Poznaniu: { id: 16, name: "Olek", type: "M", office: "PO", salary: 500 }
@@ -91,10 +91,7 @@ offices.forEach(function(office) {
 
 // 4. Wyświetl, informację o biurze w Poznaniu 
 
-  // console.log(offices[3]); // output: {id: "PO", name: "Poznań"}
-  // console.log(company.offices[3]); // output: undefined
-  // console.log(`Lokalizacja: ${company.offices[3].name}, Liczba pracowników: ${company.offices[3].workers.length}, Średnia pensja: ${company.offices[3].officeAverageSalary()}`);
-    // output: Uncaught TypeError
+  console.log(`Lokalizacja: ${company.offices[3].name}, Liczba pracowników: ${company.offices[3].workers.length}, Średnia pensja: ${company.offices[3].officeAverageSalary()}`);
 
     
 // 5. Wyświetl średnią pensję w całej firmie
