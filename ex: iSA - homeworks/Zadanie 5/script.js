@@ -50,40 +50,34 @@ var workers = [
 
 var company = { offices: [] }
 
-offices.forEach(function(office) {
-  company.offices.push({ 
-    id: office.id,
-    name: office.name, 
-    workers: workers.filter(worker => worker.office === office.id),
-    officeBestWorker: function(){
-      return this.workers.slice().sort((a,b) => b.salary-a.salary)[0];
-    },
-    officeAverageSalary: function(){
-      let result = this.workers.reduce((a,b) => { 
-        return a + b.salary }, 0) / this.workers.length;
-      return result; 
-    }
+function orderOffices(){
+  offices.forEach(function(office) {
+    company.offices.push({ 
+      id: office.id,
+      name: office.name, 
+      workers: workers.filter(worker => worker.office === office.id),
+      officeBestWorker: function(){
+        return this.workers.slice().sort((a,b) => b.salary-a.salary)[0];
+      },
+      officeAverageSalary: function(){
+        let result = this.workers.reduce((a,b) => { 
+          return a + b.salary }, 0) / this.workers.length;
+        return result; 
+      }
+    });
   });
-});
+}
+orderOffices();
 
 
 // 1. Wyświetl, informację o biurze w Gliwicach (lokalizacja, liczba przypisanych pracowników, średnia pensja),
 
+  
   console.log(`1) Biuro w mieście ${company.offices[1].name} : Liczba pracowników: ${company.offices[1].workers.length}, Średnia pensja: ${company.offices[1].officeAverageSalary()}`);
 
 
 // 2. Dodaj nowe biuro (w Poznaniu)
 
-  function addOffice() {
-    for (var i = 0; i < offices.length; i++) {
-      offices[i].worker = [];
-      for (var j = 0; j < workers.length; j++) {
-          if (offices[i].id === workers[j].office)
-              offices[i].worker.push(workers[j]);
-      }
-    }
-  }
-  addOffice();
   company.offices.push({ id: "PO", name: "Poznań" });
   // console.log('2)', company.offices[3]);
   console.log('2)', company);
@@ -116,15 +110,16 @@ offices.forEach(function(office) {
   console.log(`5) Średnia pensja w całej firmie wynosi ${companyAverageSalary()}`);
 
 
-// 6. Wyświetl najlepiej opłacanego pracownika w poszczególnych biurach
-
-  // company.offices.forEach(office => 
-    // console.log(`6) Najlepiej opłacany pracownik w mieście: ${office.name} to: `,office.officeBestWorker()));
-
-
 // 7. Wyświetl najlepiej opłacanego pracownika w całej firmie oraz nazwę jego biura.
 
   const bestWorker = workers.slice().sort((a,b) => b.salary-a.salary)[0];
   const bestWorkersOffice = offices.find(office => office.id === bestWorker.office).name;
   console.log('7) Najlepiej opłacanym pracownikiem w całej firmie jest', bestWorker.name, 'z miasta', bestWorkersOffice, '.');
+
+
+// 6. Wyświetl najlepiej opłacanego pracownika w poszczególnych biurach
+
+  company.offices.forEach(office => 
+    console.log(`6) Najlepiej opłacany pracownik w mieście: ${office.name} to: `,office.officeBestWorker()));
+
 
