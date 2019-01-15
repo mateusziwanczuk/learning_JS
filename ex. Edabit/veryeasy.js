@@ -214,6 +214,71 @@ function reverse(bool) {
         const nameShuffle = str => str.split(' ').reverse().join(' ');
 
 
+// Create a function that takes a string and returns a string with its letters in alphabetical order.
+
+    function AlphabetSoup(str) {
+        var arr = str.split('');
+        var sorted = arr.sort().join('');
+        return sorted;
+    }
+
+        function AlphabetSoup(str) {
+            return str.split('').sort().join('');
+        }
+
+            const AlphabetSoup = (str) => str.split('').sort().join('');
+
+
+// Create a function that takes a string as its argument and returns the string in reversed order.
+
+    function reverse(str) {
+        return str.split('').reverse().join('');
+    }
+
+        const reverse = (str) => [...str].reverse().join('');
+
+
+// Create a function that takes two strings and returns true if the first argument ends with the second argument; otherewise return false .
+
+    function checkEnding(str1, str2) {
+        return str1.endsWith(str2) ? true : false;
+    }
+
+        function checkEnding(str1, str2) {
+            return str1.endsWith(str2);
+        }
+
+            const checkEnding = (str1, str2) => str1.endsWith(str2);
+
+    
+// Create a function that takes an array of strings. Return all words in the array that are exactly four letters.
+
+    function isFourLetters(arr) {
+        var words = arr.filter(str => str.length === 4);
+        return words;
+    }
+
+        let isFourLetters = (arr) => arr.filter(word => word.length === 4);
+
+
+// Create a function that takes two arguments (item, times). The first argument (item) is the item that needs repeating while the second 
+// argument (times) is the number of times the item is to be repeated. Return the result in an array.
+
+    function repeat(item, times) {
+        let result = [];
+        for(let i = 0; i < times; i++) {
+        result.push(item)
+    }
+    return result;
+    }
+
+    
+// Create a function that takes an array of numbers and returns only the even values.
+
+    function noOdds(arr) {
+        return arr.filter(x => x % 2 === 0);
+    }
+
 
 
 
