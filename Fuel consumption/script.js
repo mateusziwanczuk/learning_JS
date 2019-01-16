@@ -8,6 +8,6 @@ function calculateConsumption(){
         // cost per 1l
     var consumed =  fuelConsum / 100 * distance;
         // fuel needed
-    document.getElementById('consumption').innerHTML = 'Costs of fuel: ' + (consumed*costPerL);
+    document.getElementById('consumption').innerHTML = `Costs of fuel: ${(consumed*costPerL)} zł`;
 }
 calculateConsumption();

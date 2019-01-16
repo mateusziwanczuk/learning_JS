@@ -8,11 +8,16 @@
     <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
 </head>
 <body>
-    <h1>Fuel Consumption Calculator</h1>
-    <p>Distance (km): <input id="distance" type="number" onchange="calculateConsumption()"></p>
-    <p>Average fuel consumption (l/100km): <input id="fuelConsumption" type="number"onchange="calculateConsumption()"></p>
-    <p>Cost of fuel (zł): <input id="costper" type="number" onchange="calculateConsumption()"></p>
-    <p id="consumption"></p>
+    <div class="header__container">
+        <h1>Fuel Consumption Calculator</h1>
+    </div>
+    <div class="form__container">
+        <p>Distance (km): <br><input id="distance" type="number" onchange="calculateConsumption()"></p>
+        <p>Average fuel consumption (l/100km): <input id="fuelConsumption" type="number"onchange="calculateConsumption()"></p>
+        <p>Cost per 1 liter (zł): <br><input id="costper" type="number" onchange="calculateConsumption()"></p>
+        <p id="consumption"></p>
+    </div>
+    <img class="petrol" src="petrol.jpg">
 <script src="script.js"></script>
 </body>
 </html>
