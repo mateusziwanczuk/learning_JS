@@ -31,27 +31,6 @@ Termin wykonania: 20.01.2019.
 
 ****************************************************/
 
-const fruits = ['🍏', '🍐', '🍊', '🍋', '🍓', '💣'];
-const backgroundColors = ['AliceBlue', 'Beige', 'Lavender', 'LightCyan','MistyRose'];
-const gameContainer = document.querySelector("#game");
-
-let fruitsNum = 0;
-
-function showFruit(){
-    const fruitIndex = Math.floor(Math.random() * fruits.length);
-    const fruitElement = document.createElement('div');
-    fruitElement.classList.add('fruit');
-    fruitElement.textContent = fruits[fruitIndex];
-    fruitElement.style.left = Math.random() * 90 + '%';
-    fruitElement.style.top = Math.random() * 90 + '%';
-    gameContainer.prepend(fruitElement);
-    fruitsNum++;
-    if fruitElement.textContent === '💣') {
-        showFruit();
-        fruitsNum -= 1;
-    }
-}
-
 
 
 
