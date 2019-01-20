@@ -99,14 +99,14 @@ function startGame(e) {
     if (e.keyCode === 13) {
         if (enter) {
             elements.forEach(element => element.remove());
-            fruitsOn = 0;
             points = 0;
+            fruitsOn = 0;
             countPoints.innerHTML = `POINTS: ${points}`;
         };
         !enter ? enter = true : enter;
+        removeEventListener('keydown', startGame);
         gameTime();
         changeBackground();
-        removeEventListener('keydown', startGame);
     };
 };
 addEventListener('keydown', startGame);
