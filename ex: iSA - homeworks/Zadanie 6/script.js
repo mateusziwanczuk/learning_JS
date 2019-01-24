@@ -34,28 +34,42 @@ Termin wykonania: 27.01.2019.
 const countPoints = document.querySelector("#points p");
 const fruits = ['🍏', '🍐', '🍊', '🍋', '🍓', '💣'];
 
-var fruitsOn = 0;
 var elements;
+var fruitsOn = 0;
 var points = 0;
 var pause = false;
 var enter = false;
 
 
 function createFruit() {
-    const gameContainer = document.querySelector("#game");
+    const gameContainer = document.getElementById('game');
     const fruitEl = document.createElement("div");
     const fruitIndex = Math.floor(Math.random() * fruits.length);
+        gameContainer.prepend(fruitEl);
     fruitEl.classList.add("fruit");
     fruitEl.style.top = `${Math.random() * 80}%`; 
     fruitEl.style.left = `${Math.random() * 80}%`;
     fruitEl.textContent = fruits[fruitIndex];
-    gameContainer.prepend(fruitEl);
     fruitsOn++;
+};
+
+function addElementsListeners() {
+    elements = document.querySelectorAll(".fruit");
+    elements.forEach(function(el) {
+        el.addEventListener('click', clickOn);
+    });
+};
+
+function removeElementsListeners() {
+    elements = document.querySelectorAll(".fruit");
+    elements.forEach(function(el) {
+        el.removeEventListener('click', clickOn);
+    });
 };
 
 function changeBackground() {
     const backgroundColors = ['AliceBlue', 'Beige', 'Lavender', 'LightCyan','MistyRose', 'AliceBlue', 'Beige', 'Lavender', 'LightCyan','MistyRose'];
-    const body = document.querySelector("body");
+    const body = document.querySelector('body');
     var index = 0;
     const time = setInterval(function() {
         if (index === backgroundColors.length) {
@@ -72,23 +86,12 @@ function gameTime() {
     const time = setInterval(function(){
         if (fruitsOn === 20) {
             clearInterval(time);
-            function removeElementsListeners() {
-                elements = document.querySelectorAll(".fruit");
-                elements.forEach(function(el) {
-                    el.removeEventListener('click', clickOn);
-                });
-            };
             alert(`Your score: ${points} / 20 points`);
             addEventListener('keydown', startGame);
+            removeElementsListeners();
         } else if (pause) {
             removeElementsListeners();
         } else {
-            function addElementsListeners() {
-                elements = document.querySelectorAll(".fruit");
-                elements.forEach(function(el) {
-                    el.addEventListener('click', clickOn);
-                });
-            };
             addElementsListeners();
             createFruit();
         }
@@ -98,23 +101,17 @@ function gameTime() {
 function startGame(e) {
     if (e.keyCode === 13) {
         if (enter) {
-            elements.forEach(element => element.remove());
             points = 0;
             fruitsOn = 0;
+            elements.forEach(element => element.remove());
             countPoints.innerHTML = `POINTS: ${points}`;
         };
         !enter ? enter = true : enter;
-        removeEventListener('keydown', startGame);
         gameTime();
         changeBackground();
+        removeEventListener('keydown', startGame);
     };
 };
-addEventListener('keydown', startGame);
-addEventListener('keydown', function(e) {
-    if (e.keyCode === 32) {
-        !pause ? pause = true : pause = false;
-    };
-});
 
 function clickOn() {
     if (this.textContent !== '💣') {
@@ -127,6 +124,15 @@ function clickOn() {
         countPoints.innerHTML = `POINTS: ${points}`;
     }
 };
+
+addEventListener('keydown', startGame);
+addEventListener('keydown', function(e) {
+    if (e.keyCode === 32) {
+        !pause ? pause = true : pause = false;
+    };
+});
+
+
 
 
 
