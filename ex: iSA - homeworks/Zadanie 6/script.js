@@ -32,13 +32,16 @@ Termin wykonania: 27.01.2019.
 ****************************************************/
 
 const countPoints = document.querySelector("#points p");
-const fruits = ['🍏', '🍐', '🍊', '🍋', '🍓', '💣'];
+const fruits = ['🍏', '🍐', '🍊', '🍋', '🍓'];
 
 var elements;
 var fruitsOn = 0;
+    // displayed fruits
 var points = 0;
 var pause = false;
+    // use space key to pause
 var enter = false;
+    // use enter key to launch the game
 
 
 function createFruit() {
@@ -86,9 +89,9 @@ function gameTime() {
     const time = setInterval(function(){
         if (fruitsOn === 20) {
             clearInterval(time);
-            alert(`Your score: ${points} / 20 points`);
             addEventListener('keydown', startGame);
             removeElementsListeners();
+            alert(`Your score: ${points} / 20 points`);
         } else if (pause) {
             removeElementsListeners();
         } else {
@@ -98,9 +101,9 @@ function gameTime() {
     }, 500);
 };
 
-function startGame(e) {
-    if (e.keyCode === 13) {
-        if (enter) {
+function startGame(ent) {
+    if (ent.keyCode === 13) {
+        if (enter === true) {
             points = 0;
             fruitsOn = 0;
             elements.forEach(element => element.remove());
@@ -114,20 +117,20 @@ function startGame(e) {
 };
 
 function clickOn() {
+    fruits.push('💣');
     if (this.textContent !== '💣') {
         this.remove();
         points++;
-        countPoints.innerHTML = `POINTS: ${points}`;
     } else {
         this.remove();
         points > 0 ? points = points - 1 : points;
-        countPoints.innerHTML = `POINTS: ${points}`;
     }
+    countPoints.innerHTML = `POINTS: ${points}`;
 };
 
 addEventListener('keydown', startGame);
-addEventListener('keydown', function(e) {
-    if (e.keyCode === 32) {
+addEventListener('keydown', function(space) {
+    if (space.keyCode === 32) {
         !pause ? pause = true : pause = false;
     };
 });
