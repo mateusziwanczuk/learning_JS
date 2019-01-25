@@ -35,9 +35,11 @@ const countPoints = document.querySelector("#points p");
 const fruits = ['🍏', '🍐', '🍊', '🍋', '🍓'];
 
 var elements;
+    // all elements with fruit class. 
 var fruitsOn = 0;
     // displayed fruits
 var points = 0;
+    // actual score
 var pause = false;
     // use space key to pause
 var enter = false;
@@ -71,9 +73,9 @@ function removeElementsListeners() {
 };
 
 function changeBackground() {
+    var index = 0;
     const backgroundColors = ['AliceBlue', 'Beige', 'Lavender', 'LightCyan','MistyRose', 'AliceBlue', 'Beige', 'Lavender', 'LightCyan','MistyRose'];
     const body = document.querySelector('body');
-    var index = 0;
     const time = setInterval(function() {
         if (index === backgroundColors.length) {
             index = 0;
@@ -101,8 +103,8 @@ function gameTime() {
     }, 500);
 };
 
-function startGame(ent) {
-    if (ent.keyCode === 13) {
+function startGame(enterKey) {
+    if (enterKey.keyCode === 13) {
         if (enter === true) {
             points = 0;
             fruitsOn = 0;
