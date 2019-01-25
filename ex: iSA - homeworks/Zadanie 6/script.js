@@ -136,13 +136,3 @@ addEventListener('keydown', function(space) {
         !pause ? pause = true : pause = false;
     };
 });
-
-
-
-
-
-
-
-
-
-
