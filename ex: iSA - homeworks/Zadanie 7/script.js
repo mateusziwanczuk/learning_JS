@@ -1,4 +1,5 @@
 /****************************************************************************************************
+
  Część 5 Kolekcje:
 
  Do wykonania tego zadania musisz wykonać pobrania zawartości pliku data.json
