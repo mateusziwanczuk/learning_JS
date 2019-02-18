@@ -304,9 +304,3 @@ function reverse(bool) {
             return students.map(student => student.name)
         }
 
-
-
-
-        
-
-

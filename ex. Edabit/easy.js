@@ -118,3 +118,47 @@
         function countVowels(str) {
             return str.split('').filter(x => 'aeiouAEIOU'.includes(x)).length;
         }
+
+        
+// Create a function that takes an integer and returns the factorial of that integer. That is, the integer multiplied by all positive 
+// lower integers.
+
+    function factorial(int) {
+        if (int < 0) 
+            return -1;
+        else if (int == 0) 
+            return 1;
+        else {
+            return (int * factorial(int - 1));
+        }
+    }
+
+
+// Write a function that takes four string arguments. You will be comparing the first string to the three next strings. Verify if 
+// the first string starts with the second string, includes the third string, and ends with the fourth string. If the first string 
+// passes all checks, return the string "My head, body, and tail.", otherwise, return "Incomplete.".
+
+    const verifySubstrs = (mainStr, head, body, tail) => {
+        return (
+            mainStr.startsWith(head) && 
+            mainStr.includes(body) && 
+            mainStr.endsWith(tail) 
+            ? 'My head, body, and tail.' : 'Incomplete.'
+    )}
+
+
+// Given a number n, write a function that returns PI to n decimal places.
+
+    function myPi(n) {
+        let Pi = Math.PI;
+        let fixedPi = Pi.toFixed(n);
+        let fixedPiNum = parseFloat(fixedPi);
+        return fixedPiNum;
+    }
+
+        function myPi(n) {
+            return parseFloat(Math.PI.toFixed(n))
+        }
+
+
+
