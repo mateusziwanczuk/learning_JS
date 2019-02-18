@@ -285,6 +285,28 @@ function reverse(bool) {
     const firstLast = arr => [arr.shift(), arr.pop()];
 
 
+// Create a function that returns the number of argument it was called with.
 
+    function numArgs() {
+        return arguments.length;
+    }
+
+
+// Create a function that takes an array of students and returns an array of student names.
+
+    function getStudentNames(students) {
+        return students.map(student => {
+            return student.name
+        })
+    }
+
+        function getStudentNames(students) {
+            return students.map(student => student.name)
+        }
+
+
+
+
+        
 
 
