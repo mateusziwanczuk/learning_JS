@@ -161,4 +161,52 @@
         }
 
 
+// Create a function that takes a string and returns a new string with all vowels removed.
+
+    let silenceTrump = s => s.replace(/[aeiou]/gi, '')
+
+        function silenceTrump(str) {
+            let newStrNoVowels = str.replace(/[aeiou]/ig,'')
+            return newStrNoVowels;
+        }
+
+
+// Create a function that takes an array of numbers and returns the following statistics: Minimum Value, Maximum Value, Sequence Length, Average Value
+
+    function minMaxLengthAverage(arr) {
+        const min = Math.min(...arr);
+        const max = Math.max(...arr);
+        const length = arr.length;
+        const average = arr => arr.reduce((acc, curVal) => acc + curVal, 0) / length;
+        return [min, max, length, average(arr)];
+    }
+
+        function minMaxLengthAverage(arr) {
+            return [Math.min(...arr), Math.max(...arr), arr.length, arr.reduce((a, b) => a + b) / arr.length];
+        }
+
+
+// Create a function that takes an array of arrays with numbers. Return a new (single) array with the largest numbers of each.
+
+    function findLargestNums(arr) {
+        var result = arr.map(Math.max.apply.bind(Math.max, null));
+        return result;
+    }
+
+        function findLargestNums(arr) {
+            return arr.map(x => Math.max(...x));
+        }
+
+
+// Create a function that takes an array of numbers and returns the mean value.
+
+    function mean(arr) {
+        const average = arr => arr.reduce((acc, curVal) => acc + curVal, 0) / arr.length;
+        return Math.round(average(arr) * 100) / 100;
+    }
+
+        function mean(arr) {
+            return parseFloat((arr.reduce((a, b) => a + b) / arr.length).toFixed(2));
+        }
+
 
