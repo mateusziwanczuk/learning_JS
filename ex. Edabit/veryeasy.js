@@ -303,3 +303,24 @@ function reverse(bool) {
         function getStudentNames(students) {
             return students.map(student => student.name)
         }
+
+
+// There is a single operator in JavaScript capable of providing the remainder of a division operation. 
+// Two numbers are passed as parameters. The first provider divided by the second parameter will have a remainder, possiby zero. Return that value.
+
+    function remainder(x, y) {
+        return x % y;
+    }
+
+        let remainder = (x, y) => x % y;
+
+
+// Given two strings, firstName and lastName, return a single string in the format "last, first".
+
+    function concatName(firstName, lastName) {
+        return lastName.concat(', ', firstName);
+    }
+
+        const concatName = (firstName, lastName) => `${lastName}, ${firstName}`;
+
+        
