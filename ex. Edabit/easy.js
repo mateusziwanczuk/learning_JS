@@ -210,3 +210,20 @@
         }
 
 
+// Create a function that takes an array of 10 numbers (between 0 and 9) and returns a string of those numbers formatted as a phone number (e.g. (555) 555-5555).
+
+    function formatPhoneNumber(numbers) {
+        numbers.splice(0,0,'(');
+        numbers.splice(4,0,') ');
+        numbers.splice(8,0,'-');
+        return numbers.join('');
+    }
+
+
+// Create a function that takes an array as an argument and returns true or false depending on whether the average of all elements in the array is a whole number or not.
+
+    function isAvgWhole(arr) {
+        return Number.isInteger(arr.reduce((x,y) => x + y) / arr.length)
+    }
+
+    
