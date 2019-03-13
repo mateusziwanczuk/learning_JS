@@ -335,3 +335,24 @@ function reverse(bool) {
     }
 
     
+// Create a function that takes an integer and returns true if it's divisible by 100, otherwise return false.
+
+    let divisible = num => num % 100 === 0
+
+
+// Write a function that takes in a word and determines whether or not it is plural. A plural word is one that ends in s.
+
+    function isPlural(word) {
+        return word.charAt(word.length - 1) === 's'
+    }
+
+        function isPlural(word) {
+            return word.endsWith("s");
+        }
+
+
+// Create a function that takes an argument of any data type and returns 1 if it's truthy and 0 if it's falsy.
+
+    function isTruthy(input) {
+        return input ? 1 : 0
+    }
