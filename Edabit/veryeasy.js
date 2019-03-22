@@ -356,3 +356,59 @@ function reverse(bool) {
     function isTruthy(input) {
         return input ? 1 : 0
     }
+
+
+// Create a function that determines whether or not it's possible to split a pie fairly given these three parameters:
+// Total number of slices.
+// Number of recipients.
+// How many slices each person gets.
+
+    function equalSlices(total, people, each){
+        return (people * each <= total)
+    }
+
+
+// You are given 2 out of 3 of the angles in a triangle, in degrees.
+// Write a function that classifies the missing angle as either "acute", "right", or "obtuse" based on its degrees.
+// An acute angle is one smaller than 90 degrees.
+// A right angle is one that is exactly 90 degrees.
+// An obtuse angle is one greater than 90 degrees (but smaller than 180 degrees).
+// For example: missingAngle(11, 20) should return "obtuse", since the missing angle would be 149 degrees, which makes it obtuse.
+
+    function missingAngle(angle1, angle2) {
+        let angle3 = 180 - (angle1 + angle2);
+        if (angle3 < 90){
+            return "acute"
+        } else if (angle3 === 90){
+            return "right"
+        } else {
+            return "obtuse"
+        }
+    }
+
+        function missingAngle(angle1, angle2) {
+            return angle1 + angle2 < 90 ? 'obtuse'
+                : angle1 + angle2 > 90 ? 'acute'
+                : 'right';
+        }
+
+
+// Create a function that takes in array of hurdle heights and a jumper's jump height, and determine whether or not the hurdler can clear all the hurdles. 
+// A hurdler can clear a hurdle if their jump height is greater than or equal to the hurdle height. So for example, hurdleJump([1, 2, 4, 3, 2, 3], 4) should 
+// return true, since 4 is greater than or equal to each element in the array. On the other hand, hurdleJump([1,2,2,1], 1) should return false, since the hurdler 
+// cannot clear the second hurdle. Return true for the edge case of an empty array of hurdles. (Zero hurdles means that any jump height can clear them).
+
+    function hurdleJump(hurdles, jumpHeight) {
+        return jumpHeight >= Math.max(...hurdles)
+    }
+
+
+// A chessboard has rows numbered 1-8 and columns numbered A-H. In chess, rooks are pieces that can any number of squares horizontally or vertically.
+// Given the location of your rook and your opponent's rook, determine whether or not you can capture your opponent's rook with your own. For this exercise, 
+// assume there are no other pieces that are blocking. Your position and your opponent's position are represented as the first and second element of the 
+// input array, respectively. For instance, in this example: canCapture(["A8", "E8"]) ➞ true your rook (at A8) can take your opponents rook (at E8) by moving horizontally.
+
+    function canCapture([yourRook, opponentsRook]) {
+        return yourRook.charAt(0) === opponentsRook.charAt(0) ||
+            yourRook.charAt(1) === opponentsRook.charAt(1)
+    }
