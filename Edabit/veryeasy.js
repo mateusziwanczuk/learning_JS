@@ -412,3 +412,48 @@ function reverse(bool) {
         return yourRook.charAt(0) === opponentsRook.charAt(0) ||
             yourRook.charAt(1) === opponentsRook.charAt(1)
     }
+
+
+// In semantic versioning a piece of software can be represented in a format like this example: 6.1.9. The first number is the major version.
+// The second number is the minor version. The third number is the patch (bug fixes). Write three separate functions, one to retrieve each element 
+// in the semantic versioning specification.
+
+    function retrieveMajor(semver) {
+        return semver.split(".")[0];
+    }
+
+    function retrieveMinor(semver) {
+        return semver.split(".")[1];
+    }
+
+    function retrievePatch(semver) {
+        return semver.split(".")[2];
+    }
+
+
+// Create a function that counts the number of syllables a word has. Each syllable is separated with a dash -.
+
+    let numberSyllables = (word) => word.split('-').length
+
+
+
+// Create a function that takes in an array and returns true if all its values are even, and false otherwise. Not a big deal, your friend says. He writes the following code:  
+//     function checkAllEven(arr) {
+//         return arr.every(x % 2 === 0)
+//     }
+// The code above leads to a Reference Error, with x being undefined. Fix the code above so that all tests pass:
+
+    let isEvenNum = (num) => num % 2 === 0 
+    let checkAllEven = (arr) => arr.every(isEvenNum)
+
+
+// A palindrome is a word that is identical forward and backwards: mom, racecar, kayak. Given a word, create a function that checks whether it is a palindrome.
+
+    let checkPalindrome = (str) => str === str.split('').reverse().join('')
+
+
+// Create a function that takes in an initial word and filters out an array to contain words that start with the same letters as the initial word.
+
+    function dictionary(initial, words) {
+        return words.filter(word => word.startsWith(initial));
+    }
