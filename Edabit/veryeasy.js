@@ -468,3 +468,6 @@ function reverse(bool) {
     let hasSpaces = (str) => str.includes(" ")
 
 
+// Given a number and an object with min and max properties, return true if the number lies within the given range (inclusive).
+
+    let isInRange = (num, range) => num <= range.max && num >= range.min
