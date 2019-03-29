@@ -457,3 +457,14 @@ function reverse(bool) {
     function dictionary(initial, words) {
         return words.filter(word => word.startsWith(initial));
     }
+
+// Create a function that adds a string ending to each member in an array.
+
+    let addEnding = (arr, ending) => arr.map(el => el.concat(ending))
+
+
+// Create a function that returns true if a string contains any spaces.
+
+    let hasSpaces = (str) => str.includes(" ")
+
+
