@@ -471,3 +471,75 @@ function reverse(bool) {
 // Given a number and an object with min and max properties, return true if the number lies within the given range (inclusive).
 
     let isInRange = (num, range) => num <= range.max && num >= range.min
+
+
+// Write two functions:
+// toInt() : A function to convert the integer value of a string.
+// toStr() : A function to transform a string into an integer.
+
+    let toInt = (str) => Number(str);
+    let toStr = (int) => `${int}`;
+
+
+// Given a number and an object with min and max properties, return true if the number lies within the given range (inclusive).
+
+    const isInRange = (num, range) => num >= range.min && num <= range.max;
+
+
+// Create a function to remove all null values from an array.
+
+    function removeNull(arr) {
+        return arr.filter((i) => i !== null)
+    }
+
+        let removeNull = (arr) => arr.filter((i) => i !== null)
+
+
+// Create a function that returns the total number of parameters passed in.
+
+    function numberArgs(/* fill-in */) {
+        return arguments.length
+    }
+
+        const numberArgs = (...args) => args.length;
+
+
+// Create a function that takes a number as an argument and returns an array of numbers counting down from this number to zero.
+
+    function countdown(start) {
+        let arr = []
+        for (let i = start; i >= 0; i--) {
+            arr.push(i)
+        }
+        return arr
+    }
+
+
+// Write two functions:
+// firstArg() should return the first parameter passed in.
+// lastArg() should return the last parameter passed in.
+// Return undefined if the function takes no parameters.
+
+    function firstArg() {
+        return arguments[0];
+    }
+
+    function lastArg() {
+        return arguments[arguments.length-1];
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
