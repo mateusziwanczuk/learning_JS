@@ -529,17 +529,51 @@ function reverse(bool) {
     }
 
 
+// Create a function that returns the ASCII value of the passed in character.
+
+    let ctoa = (c) => c.charCodeAt(0)
 
 
+// Create a function that repeats each character in a string n times.
+
+    function repeat(str, n) {
+        return str
+            .split('')
+            .map(c => c.repeat(n))
+            .join('');
+    }
 
 
+// Create a function that returns true if an input string contains only uppercase or only lowercase letters.
+
+    function sameCase(str) {
+        let strUp = str.toUpperCase()
+        let strLow = str.toLowerCase()
+        return strUp === str || strLow === str ? true : false
+    }
+
+        const sameCase = str =>
+        str.toUpperCase() === str || str.toLowerCase() === str;
 
 
+// Write a function that transforms all letters from [a,m] to 0 and letters from [n,z] to 1 in a string.
+
+    function convertBinary(str) {
+        return str
+            .replace(/[a-m]/gi, '0')
+            .replace(/[n-z]/gi, '1');
+    }
 
 
+// Create a function replaces all the vowels in a string with a specified character.
+
+    function replaceVowels(str, ch) {
+        return str.replace(/[aeoiu]/g, ch)
+    }
 
 
+// Create a function that filters out an array to include numbers who only have a certain number of digits.
 
-
-
-
+    function filterDigitLength(arr, num) {
+        return arr.filter(n => String(n).length === num);
+    }
