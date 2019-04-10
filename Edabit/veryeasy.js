@@ -577,3 +577,12 @@ function reverse(bool) {
     function filterDigitLength(arr, num) {
         return arr.filter(n => String(n).length === num);
     }
+
+
+// Create a function that removes the first and last characters from a string. If the string is 2 or fewer characters long, 
+// return the string itself (See Example #4).
+
+    const removeFirstLast = (str) => str.length > 2 
+        ? str.slice(1, str.length - 1) 
+        : str
+
