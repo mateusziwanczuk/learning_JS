@@ -586,3 +586,72 @@ function reverse(bool) {
         ? str.slice(1, str.length - 1) 
         : str
 
+
+// Write a function that takes the base and height of a triangle and return its area.
+
+    const triArea = (a, h) => (a * h) / 2
+
+
+// Create a function that returns true if an integer is divisible by 5, and false otherwise.
+
+    const divisibleByFive = n => n % 5 === 0 
+
+
+// You've got chickens (2 legs), cows (4 legs) and pigs (4 legs) on your farm. Return the total number of legs on your farm.
+
+    const animals = (chickens, cows, pigs) => {
+        return chickens * 2 + cows * 4 + pigs * 4
+    }
+
+        function animals(chickens, cows, pigs) {
+            return chickens * 2 + (cows + pigs) * 4;
+        }
+
+
+// Create a function that returns true if a string is empty and false otherwise.
+
+    const isEmpty =s => s === '';
+
+
+// Create a function to concatenate two integer arrays.
+
+    const concat = (arr1, arr2) => arr1.concat(arr2)
+
+        const concat = (arr1, arr2) => [...arr1,...arr2]
+
+
+// Create a function that returns the smaller number.
+
+    const smallerNum = (n1, n2) => Number(n1) < Number(n2) ? n1 : n2
+
+
+// Create a function that takes an array and returns the difference between the smallest and biggest numbers.
+
+    const differenceMaxMin = arr => Math.max(...arr) - Math.min(...arr)
+
+
+// Create a function that returns the next element in an arithmetic sequence. In an arithmetic sequence, each element is formed 
+// by adding the same constant to the previous element.
+
+    let nextElement= arr => arr[arr.length - 1] + (arr[1] - arr[0])
+
+
+// A number added with its additive inverse equals zero. Create a function that returns an array of additive inverses.
+
+    const additiveInverse = arr => arr.map(i => -i)
+
+
+// This is a reverse coding challenge. Normally you're given explicit directions with how to create a function. Here, you must 
+// generate your own function to satisfy the relationship between the inputs and outputs. Your task is to create a function that, 
+// when fed the inputs below, produce the sample outputs shown.
+
+    const mysteryFunc = (arr, num) => arr.map(i => i % num)
+
+
+// Write a function that partitions the array into two subarrays: one with all even integers, and the other with all odd integers. 
+// Return your result in the following format: [[evens], [odds]]
+
+    const evenOddPartition = arr => [
+        arr.filter(x => x % 2 == 0),
+        arr.filter(y => y % 2 != 0) 
+    ]
