@@ -655,3 +655,34 @@ function reverse(bool) {
         arr.filter(x => x % 2 == 0),
         arr.filter(y => y % 2 != 0) 
     ]
+
+
+// Create a function that returns the product of all odd integers in an array.
+
+    const oddProduct = arr => arr
+        .filter(i => i % 2 !== 0)
+        .reduce((a, b) => a * b)
+
+
+// Create a function that removes the first and last characters from a string.
+
+    const removeFirstLast = str => str.length <= 2 ? str : str.slice(1, -1)
+
+
+// Write a function that maps files to their extension names.
+
+    function getExtension(arr) {
+        return arr.map(x => x.split(".").pop())
+    }
+
+
+// Create a function to extract the name of the subreddit from its URL.
+
+    function subReddit(link) {
+        return link.map(x => x.split(".").pop())
+    }
+
+
+// Write a function that returns true if all integers in an array are factors of a number, and false otherwise.
+
+    const checkFactors = (factors, num) => factors.every(factor => num % factor === 0)
