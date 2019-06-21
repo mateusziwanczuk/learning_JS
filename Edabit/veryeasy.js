@@ -686,3 +686,89 @@ function reverse(bool) {
 // Write a function that returns true if all integers in an array are factors of a number, and false otherwise.
 
     const checkFactors = (factors, num) => factors.every(factor => num % factor === 0)
+    
+    
+// Create a function that finds the maximum range of a triangles third edge.
+    
+    const nextEdge = (side1, side2) => (side1 + side2) - 1 
+    
+    
+// Write a function to reverse an array.
+    
+    const reverse = arr => arr.reverse()
+    
+    
+// Create a function that takes a name and returns a greeting. Don't use a normal function but use an "arrow function".
+    
+    const helloName = name => `Hello ${name}!`
+    
+    
+// Write a function to check whether an array contains a particular element.
+    
+    const check = (arr, el) => arr.includes(el)
+    
+    
+// Create a function that gets an object arguments with height, width and length of a box and returns the volume of the box.
+    
+    const volumeOfBox = (sizes) => sizes.height * sizes.width * sizes.length;
+
+
+// Write a function that validates whether two strings are identical. Make this validator case insensitive.
+
+    const match = (s1, s2) => s1.toLowerCase() === s2.toLowerCase()
+    
+    
+// Write a function that returns true if k^k == n for input (n, k).
+    
+    const kToK = (n, k) => Math.pow(k, k) === n
+    
+    
+// Create a function that goes through the array, incrementing (+1) for each odd number and decrementing (-1) for each even number.
+    
+    const transform = arr => {
+	    return arr.map(i => i % 2 === 0 ? i - 1 : i + 1)
+    }
+    
+    
+// Write a regular expression that matches a string if it contains at least one digit.
+    
+    let x = /\d/;
+
+
+// Write a function that returns true if there exists at least one number that is larger than or equal to n.
+
+    function existsHigher(arr, n) {
+        return arr.some(el => el >= n)
+    }
+
+
+// Write a function that returns true if an object is empty, and false otherwise.
+
+    const isEmpty = obj => Object.keys(obj).length === 0;
+
+
+// Write a function that returns true if a word can be found in between the start and end word in a dictionary.
+
+    function isBetween(first, last, word) {
+	    return [...arguments].sort()[1] === word;
+    }
+
+
+// Write a function that turns a comma-delimited list into an array of strings.
+
+    function toArray(str) {
+    	return str.length > 0 ? str.split(", ") : [];
+    }
+
+
+// In this exercise you will have to: 
+   // - Take a list of names, 
+   // Add "Hello" to every name, 
+   // Make one big string with all greetings.
+   // The solution should be one string with a comma in between every "Hello (Name)".
+
+    function greetPeople(names) {
+	    return names.map(name => `Hello ${name}`).join(", ")
+    }
+
+ 
